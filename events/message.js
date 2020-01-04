@@ -17,6 +17,10 @@ module.exports = async (client, message) => {
   const settings = client.getSettings(message.guild);
   const level = client.permLevel(message);
 
+  if (message.content.toLowerCase() === 'f') {
+    return message.reply('Respects Authorized.');
+  }
+
   // Ignore messages not starting with the prefix
   if (message.content.indexOf(settings.prefix) !== 0) {
     return;
