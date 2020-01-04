@@ -18,7 +18,7 @@ module.exports = async (client, message) => {
   const level = client.permLevel(message);
 
   if (message.content.toLowerCase() === 'f') {
-    return message.reply('Respects Authorized.');
+    return message.channel.send('Respects Authorized.');
   }
 
   // Ignore messages not starting with the prefix
